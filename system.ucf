@@ -1,0 +1,44 @@
+
+# ==== Cloclk inputs (CLK) ====
+
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+#NET "clk" TNM_NET = sys_clk;
+TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+NET "rst"	LOC = "C12"	| IOSTANDARD = "LVCMOS33";
+NET "led"	LOC = "B13"	| IOSTANDARD = "LVCMOS33";
+
+
+# ==== UART ====
+NET "uart_rxd"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_txd"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";	
+
+#===== GPIO =====
+
+NET "gpio_io<0>"	LOC = "U9"	| IOSTANDARD = "LVCMOS33"; 
+NET "gpio_io<1>"	LOC = "U8"	| IOSTANDARD = "LVCMOS33";		
+NET "gpio_io<2>"	LOC = "R7"	| IOSTANDARD = "LVCMOS33";		  
+NET "gpio_io<3>"	LOC = "R6"	| IOSTANDARD = "LVCMOS33";		
+NET "gpio_io<4>"	LOC = "T5"	| IOSTANDARD = "LVCMOS33";		
+NET "gpio_io<5>"	LOC = "T4"	| IOSTANDARD = "LVCMOS33";		
+NET "gpio_io<6>"	LOC = "U7"	| IOSTANDARD = "LVCMOS33";		
+NET "gpio_io<7>"	LOC = "U6"	| IOSTANDARD = "LVCMOS33";	
+
+# ==== SPI ====
+NET "spi_miso"	LOC = "J3"	| IOSTANDARD = "LVCMOS33";	#JC3	
+NET "spi_mosi"	LOC = "E7"	| IOSTANDARD = "LVCMOS33";	#JC2	
+NET "spi_clk"	LOC = "K2"	| IOSTANDARD = "LVCMOS33";	#JC1
+
+NET "spi_cs<0>"	LOC = "P2"	| IOSTANDARD = "LVCMOS33";  #JB, G14
+NET "spi_cs<1>"	LOC = "R2"	| IOSTANDARD = "LVCMOS33";	#P15	
+NET "spi_cs<2>"	LOC = "U1"	| IOSTANDARD = "LVCMOS33";	#V11	  
+NET "spi_cs<3>"	LOC = "P5"	| IOSTANDARD = "LVCMOS33";	#V15	
+NET "spi_cs<4>"	LOC = "R1"	| IOSTANDARD = "LVCMOS33";	#K16	
+NET "spi_cs<5>"	LOC = "V1"	| IOSTANDARD = "LVCMOS33";	#R16	
+NET "spi_cs<6>"	LOC = "T9"	| IOSTANDARD = "LVCMOS33";		
+NET "spi_cs<7>"	LOC = "U11"	| IOSTANDARD = "LVCMOS33";	
+		
+
+# ==== I2C ====
+#NET "i2c_sda"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";		
+#NET "i2c_clk"	LOC = "R8"	| IOSTANDARD = "LVCMOS33";		
